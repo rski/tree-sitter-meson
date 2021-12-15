@@ -15,7 +15,7 @@ module.exports = grammar({
 
       _expression: $ => choice(
           $.assignment,
-          $.literal,
+          $._literal,
 
           $.multiplicative_expression,
 
@@ -29,18 +29,12 @@ module.exports = grammar({
           $.expression
       ),
 
-      identifier: $ => /[a-zA-Z_][a-zA-Z_0-9]*/,
 
       expression: $ => choice(
           // TODO: more expressions
           $.identifier,
-          $.literal,
+          $._literal,
       ),
-      literal: $ => choice(
-          $.boolean_literal,
-          $.octal_literal,
-      ),
-
 
 
       multiplicative_expression: $ => choice(

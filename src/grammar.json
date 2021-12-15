@@ -35,7 +35,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "literal"
+          "name": "_literal"
         },
         {
           "type": "SYMBOL",
@@ -60,10 +60,6 @@
         }
       ]
     },
-    "identifier": {
-      "type": "PATTERN",
-      "value": "[a-zA-Z_][a-zA-Z_0-9]*"
-    },
     "expression": {
       "type": "CHOICE",
       "members": [
@@ -73,20 +69,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "literal"
-        }
-      ]
-    },
-    "literal": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "boolean_literal"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "octal_literal"
+          "name": "_literal"
         }
       ]
     },
@@ -315,6 +298,10 @@
           "name": "boolean_literal"
         }
       ]
+    },
+    "identifier": {
+      "type": "PATTERN",
+      "value": "[a-zA-Z_][a-zA-Z_0-9]*"
     }
   },
   "extras": [

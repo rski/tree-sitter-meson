@@ -11,8 +11,7 @@ var1 = true
     (identifier)
     (assignment_operator)
     (expression
-      (literal
-        (boolean_literal)))))
+      (boolean_literal))))
 
 =========
 numeric literals
@@ -25,12 +24,9 @@ numeric literals
 
 ---------
 (source_file
-  (literal
-    (octal_literal))
-  (literal
-    (octal_literal))
-  (literal
-    (octal_literal))
+ (octal_literal)
+ (octal_literal)
+ (octal_literal)
   (ERROR
     (UNEXPECTED '\n')))
 

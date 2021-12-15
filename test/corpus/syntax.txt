@@ -1,0 +1,52 @@
+# Tests taken from https://github.com/mesonbuild/meson/blob/a2934ca9d13ede4eb97b320bc768319ecad7b525/docs/markdown/Syntax.md
+=========
+boolean variable
+=========
+
+var1 = true
+
+---------
+(source_file
+  (assignment
+    (identifier)
+    (assignment_operator)
+    (expression
+      (literal
+        (boolean_literal)))))
+
+=========
+numeric literals
+=========
+
+0o0
+0o1
+0o7
+0o
+
+---------
+(source_file
+  (literal
+    (octal_literal))
+  (literal
+    (octal_literal))
+  (literal
+    (octal_literal))
+  (ERROR
+    (UNEXPECTED '\n')))
+
+
+=====
+expressions
+=====
+
+not true
+not true % - 1
+-----
+
+(source_file
+  ()
+    (identifier)
+    (assignment_operator)
+    (expression
+      (literal
+        (boolean_literal))))

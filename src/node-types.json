@@ -1,5 +1,28 @@
 [
   {
+    "type": "assignment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assignment_operator",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "assignment_operator",
     "named": true,
     "fields": {}
@@ -39,9 +62,41 @@
         {
           "type": "boolean_literal",
           "named": true
+        },
+        {
+          "type": "octal_literal",
+          "named": true
         }
       ]
     }
+  },
+  {
+    "type": "multiplicative_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "multiplicative_expression",
+          "named": true
+        },
+        {
+          "type": "multiplicative_operator",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "multiplicative_operator",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "source_file",
@@ -52,14 +107,22 @@
       "required": false,
       "types": [
         {
-          "type": "variable_definition",
+          "type": "assignment",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "multiplicative_expression",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "variable_definition",
+    "type": "unary_expression",
     "named": true,
     "fields": {},
     "children": {
@@ -67,22 +130,39 @@
       "required": true,
       "types": [
         {
-          "type": "assignment_operator",
+          "type": "unary_expression",
           "named": true
         },
         {
-          "type": "expression",
-          "named": true
-        },
-        {
-          "type": "identifier",
+          "type": "unary_operator",
           "named": true
         }
       ]
     }
   },
   {
+    "type": "unary_operator",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "\n",
+    "named": false
+  },
+  {
+    "type": "!=",
+    "named": false
+  },
+  {
+    "type": "%",
+    "named": false
+  },
+  {
     "type": "%=",
+    "named": false
+  },
+  {
+    "type": "*",
     "named": false
   },
   {
@@ -90,7 +170,15 @@
     "named": false
   },
   {
+    "type": "+",
+    "named": false
+  },
+  {
     "type": "+=",
+    "named": false
+  },
+  {
+    "type": "-",
     "named": false
   },
   {
@@ -98,7 +186,19 @@
     "named": false
   },
   {
+    "type": "/",
+    "named": false
+  },
+  {
     "type": "/=",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<=",
     "named": false
   },
   {
@@ -106,11 +206,43 @@
     "named": false
   },
   {
+    "type": "==",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
+    "named": false
+  },
+  {
+    "type": "decimal_literal",
+    "named": true
+  },
+  {
     "type": "false",
     "named": false
   },
   {
+    "type": "hex_literal",
+    "named": true
+  },
+  {
     "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "in",
+    "named": false
+  },
+  {
+    "type": "not",
+    "named": false
+  },
+  {
+    "type": "octal_literal",
     "named": true
   },
   {
